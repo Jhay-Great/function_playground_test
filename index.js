@@ -8,6 +8,7 @@
  */
 const test = 'this';
 const capitalize = function(string) {
+    return string[0].toUpperCase();
 }
 
-capitalize(test);
+console.log(capitalize(test));
