@@ -34,21 +34,8 @@ const isPalindrome = function (string) {
   }
 
   return typeof string !== "string" && false;
-
-  //     let start, end, mid;
-
-  //   for (let i = 0; i < string.length; i++) {
-  //     start = i;
-  //     end = string.length - i;
-  //     mid = Math.floor((start + end) / 2);
-
-  //     console.log(start, end, mid);
-  //   }
+  
 };
-// console.log(isPalindrome(test0));
-console.log(isPalindrome(""));
-console.log(isPalindrome(232));
-// console.log(isPalindrome('civic'))
 
 // wordCount(str);
 const wordCount = function (string) {
@@ -127,7 +114,7 @@ const people = [
   { name: "elsie", age: 13 },
   { name: "jake", age: 19 },
 ];
-// console.log(filterByAge(people, 20))
+
 
 // function composition
 /**
