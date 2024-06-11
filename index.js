@@ -27,6 +27,35 @@ const reverse = function (string) {
  * returns true or false
  */
 const isPalindrome = function(string) {
+    for (let i = 0; i < string.length; i++) {
+        let start = i;
+        let end = string.length - 1;
+        let mid = Math.floor((start + end) / 2);
 
+        console.log(start, end, mid)
+    }
+    
 }
+// console.log(isPalindrome(test0));
+
+// wordCount(str);
+/**
+ * loop through the words
+ * initialise a count variable to 0
+ * on every iteration increase count
+ * 
+ * alt 
+ * use array.length
+ */
+const wordCount = function(string) {
+    console.log(string.length);
+
+    let count = 0;
+    for (let i = 0; i < string.length; i++) {
+        count += 1;
+    }
+    return count;
+}
+console.log(wordCount(test0));
+console.log(wordCount(test1));
 
