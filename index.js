@@ -57,12 +57,30 @@ const wordCount = function(string) {
 
 
 // Array Transformation
-/**
- * loop through the array
- * multiple the array by 2
- */
+// double
 const array = [1,2,3,4];
 const double = function(array) {
     return array.map(element => element * 2);
 }
-console.log(double(array));
+
+// filterEven
+/**
+ * array.filter();
+ * alt
+ * loop through the array
+ * initialize a new array
+ * if element % 2 === 0 push the element into the initialized array
+ * return new array
+ */
+const filterEven = function(array) {
+    let newArray = [];
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            newArray.push(array[i]);
+            continue;
+        }
+    }
+    return newArray;
+}
+console.log(filterEven(array));
+
