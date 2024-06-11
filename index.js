@@ -48,14 +48,21 @@ const isPalindrome = function(string) {
  * use array.length
  */
 const wordCount = function(string) {
-    console.log(string.length);
-
     let count = 0;
     for (let i = 0; i < string.length; i++) {
         count += 1;
     }
     return count;
 }
-console.log(wordCount(test0));
-console.log(wordCount(test1));
 
+
+// Array Transformation
+/**
+ * loop through the array
+ * multiple the array by 2
+ */
+const array = [1,2,3,4];
+const double = function(array) {
+    return array.map(element => element * 2);
+}
+console.log(double(array));
