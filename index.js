@@ -35,17 +35,9 @@ const isPalindrome = function (string) {
     console.log(start, end, mid);
   }
 };
-// console.log(isPalindrome(test0));
+
 
 // wordCount(str);
-/**
- * loop through the words
- * initialise a count variable to 0
- * on every iteration increase count
- *
- * alt
- * use array.length
- */
 const wordCount = function (string) {
   let count = 0;
   for (let i = 0; i < string.length; i++) {
@@ -62,14 +54,6 @@ const double = function (array) {
 };
 
 // filterEven
-/**
- * array.filter();
- * alt
- * loop through the array
- * initialize a new array
- * if element % 2 === 0 push the element into the initialized array
- * return new array
- */
 const filterEven = function (array) {
   let newArray = [];
   for (let i = 0; i < array.length; i++) {
@@ -82,12 +66,6 @@ const filterEven = function (array) {
 };
 
 // sum(arr)
-/**
- * loop through the array
- * initialize a sum variable equal to the first element in the index
- * add each the current array element to the previous element
- * array element should start count from the second element
- */
 const sum = function (array) {
   let sum = array[0];
   for (let i = 1; i < array.length; i++) {
@@ -98,17 +76,6 @@ const sum = function (array) {
 };
 
 // average(arr)
-/**
- * loop through the array
- * initialize a sum and length variable
- * find the length of the array
- * add the elements in the array
- *
- * divide the total sum of the elements in the array by the length of the array
- *
- * alt
- * use a map with the same conditions
- */
 const average = function (array) {
   let sum = array[0];
   let length = array.length;
@@ -121,8 +88,6 @@ const average = function (array) {
 
   return sum / length;
 };
-console.log(average(array));
-console.log(average([4, 5]));
 
 // Object transformations
 // fullName(person)
@@ -139,7 +104,20 @@ const isAdult = function (person) {
   }
   return false;
 };
-console.log(isAdult({ age: 22 }));
 
+// filterByAge(people, minAge)
+const filterByAge = function(people, minAge = 18) {
+    return people.filter(person => person.age >= minAge)
+}
+const people = [
+    {name: 'john', age: 23},
+    {name: 'elsie', age: 13},
+    {name: 'jake', age: 19},
+]
+console.log(filterByAge(people, 20))
 
+// function composition
+const compose = function(...fns) {
+
+}
 
