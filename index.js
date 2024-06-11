@@ -19,7 +19,7 @@ const reverse = function (string) {
 
 // isPalindrome(str)
 /**
- * initialize a start, mid and end variable
+ * initialize a start and end variable
  * loop through the string
  * if the start letter is not the same as the end letter return false
  * if the starting letter is the same as the ending letter and the start and end is not equal to the mid point increase the starting position and decrease the ending position
@@ -27,13 +27,15 @@ const reverse = function (string) {
  * returns true or false
  */
 const isPalindrome = function (string) {
-    let start = 0;
-    let end = string.length - 1;
-    let mid = Math.floor((start + end) / 2);
-    
     for (let i = 0; i < string.length; i++) {
+        // let start = i;
+        // let end = (string.length - 1) - 1;
+
         // alt 3.0
-        console.log(string[i], string[string.length - 1 - i])
+        // console.log(string[i], string[string.length - 1 - i])
+        if (string[i] !== string[string.length - 1 - i]) return false;
+        if (i === (string.length - 1 - i) && string[i] === string[string.length - 1 - i]) return true;
+        // console.log(string[i]);
 
         // alt 2.0
         // if (string[start + i] !== string[end - i]) {
