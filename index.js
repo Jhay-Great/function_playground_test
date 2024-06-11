@@ -27,14 +27,52 @@ const reverse = function (string) {
  * returns true or false
  */
 const isPalindrome = function (string) {
-  for (let i = 0; i < string.length; i++) {
-    let start = i;
+    let start = 0;
     let end = string.length - 1;
     let mid = Math.floor((start + end) / 2);
+    
+    for (let i = 0; i < string.length; i++) {
+        // alt 3.0
+        console.log(string[i], string[string.length - 1 - i])
 
-    console.log(start, end, mid);
-  }
+        // alt 2.0
+        // if (string[start + i] !== string[end - i]) {
+        //     console.log(string[start], string[end]);
+        //     return false
+        // };
+        // if (start === end && string[start] === string[end]) {
+        //     console.log(string[start], string[end]);
+        //     return true; 
+        // }
+
+        // console.log(string[start], string[end], 'nil')
+        
+        // alt 1.0
+        // if (mid === start && mid === end && ) 
+        
+        // let start = i;
+        // let end = (string.length - i) - 1;
+
+
+
+        // console.log('mid: ', mid);
+    }
+    
+    
+    
+//     let start, end, mid;
+    
+//   for (let i = 0; i < string.length; i++) {
+//     start = i;
+//     end = string.length - i;
+//     mid = Math.floor((start + end) / 2);
+
+//     console.log(start, end, mid);
+//   }
 };
+console.log(isPalindrome(test0));
+console.log(isPalindrome(test1));
+console.log(isPalindrome('civic'))
 
 
 // wordCount(str);
@@ -114,10 +152,17 @@ const people = [
     {name: 'elsie', age: 13},
     {name: 'jake', age: 19},
 ]
-console.log(filterByAge(people, 20))
+// console.log(filterByAge(people, 20))
 
 // function composition
+/**
+ * a function that accepts multiple inputs functions and executes the functions
+ * eg. double all even numbers in an array
+ */
 const compose = function(...fns) {
+    console.log(fns);
+
 
 }
+// console.log(compose(array, filterEven, double));
 
