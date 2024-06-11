@@ -7,8 +7,9 @@
  * find the first letter, that is the index of the first letter
  * use the replace method to replace the first letter with upperCased letter
  */
-const test = 'this';
+const test = ' this is new';
 const capitalize = function(string) {
+    // console.log(string.trim().replace());
     return string.replace(string[0], string[0].toUpperCase());
 }
 
