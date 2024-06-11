@@ -82,5 +82,57 @@ const filterEven = function(array) {
     }
     return newArray;
 }
-console.log(filterEven(array));
+
+// sum(arr)
+/**
+ * loop through the array
+ * initialize a sum variable equal to the first element in the index
+ * add each the current array element to the previous element
+ * array element should start count from the second element
+ */
+const sum = function(array) {
+    let sum = array[0];
+    for (let i = 1; i < array.length; i++) {
+        sum += array[i];
+    }
+
+    return sum;
+}
+
+// average(arr)
+/**
+ * loop through the array
+ * initialize a sum and length variable
+ * find the length of the array
+ * add the elements in the array
+ * 
+ * divide the total sum of the elements in the array by the length of the array
+ * 
+ * alt
+ * use a map with the same conditions
+ */
+const average = function(array) {
+    let sum = array[0];
+    let length = array.length;
+
+    console.log(length);
+    
+    for (let i = 1; i < array.length; i++) {
+        sum += array[i];
+    }
+
+    return sum / length;
+}
+console.log(average(array));
+console.log(average([4, 5]))
+
+
+// Object transformations
+// fullName(person)
+const fullName = function(person) {
+    const {firstName, lastName} = person;
+    return `${firstName} ${lastName}`;
+}
+
+console.log(fullName({firstName: 'John', lastName: 'Yeboah'}))
 
