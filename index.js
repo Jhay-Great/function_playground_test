@@ -18,64 +18,37 @@ const reverse = function (string) {
 };
 
 // isPalindrome(str)
-/**
- * initialize a start and end variable
- * loop through the string
- * if the start letter is not the same as the end letter return false
- * if the starting letter is the same as the ending letter and the start and end is not equal to the mid point increase the starting position and decrease the ending position
- * if the letter at position start is equal to letter at position end and the start and end is equal to the mid point return true
- * returns true or false
- */
 const isPalindrome = function (string) {
-    for (let i = 0; i < string.length; i++) {
-        // let start = i;
-        // let end = (string.length - 1) - 1;
+  for (let i = 0; i < string.length; i++) {
+    let start = i;
+    let end = string.length - 1 - i;
 
-        // alt 3.0
-        // console.log(string[i], string[string.length - 1 - i])
-        if (string[i] !== string[string.length - 1 - i]) return false;
-        if (i === (string.length - 1 - i) && string[i] === string[string.length - 1 - i]) return true;
-        // console.log(string[i]);
+    console.log("type of: ", typeof string);
 
-        // alt 2.0
-        // if (string[start + i] !== string[end - i]) {
-        //     console.log(string[start], string[end]);
-        //     return false
-        // };
-        // if (start === end && string[start] === string[end]) {
-        //     console.log(string[start], string[end]);
-        //     return true; 
-        // }
-
-        // console.log(string[start], string[end], 'nil')
-        
-        // alt 1.0
-        // if (mid === start && mid === end && ) 
-        
-        // let start = i;
-        // let end = (string.length - i) - 1;
-
-
-
-        // console.log('mid: ', mid);
+    if (typeof string === "undefined") {
+      console.log("undef");
     }
-    
-    
-    
-//     let start, end, mid;
-    
-//   for (let i = 0; i < string.length; i++) {
-//     start = i;
-//     end = string.length - i;
-//     mid = Math.floor((start + end) / 2);
 
-//     console.log(start, end, mid);
-//   }
+    if (string[start] !== string[end] || string === undefined) return false;
+    if (start === end && string[start] === string[end]) return true;
+  }
+
+  return typeof string !== "string" && false;
+
+  //     let start, end, mid;
+
+  //   for (let i = 0; i < string.length; i++) {
+  //     start = i;
+  //     end = string.length - i;
+  //     mid = Math.floor((start + end) / 2);
+
+  //     console.log(start, end, mid);
+  //   }
 };
-console.log(isPalindrome(test0));
-console.log(isPalindrome(test1));
-console.log(isPalindrome('civic'))
-
+// console.log(isPalindrome(test0));
+console.log(isPalindrome(""));
+console.log(isPalindrome(232));
+// console.log(isPalindrome('civic'))
 
 // wordCount(str);
 const wordCount = function (string) {
@@ -146,14 +119,14 @@ const isAdult = function (person) {
 };
 
 // filterByAge(people, minAge)
-const filterByAge = function(people, minAge = 18) {
-    return people.filter(person => person.age >= minAge)
-}
+const filterByAge = function (people, minAge = 18) {
+  return people.filter((person) => person.age >= minAge);
+};
 const people = [
-    {name: 'john', age: 23},
-    {name: 'elsie', age: 13},
-    {name: 'jake', age: 19},
-]
+  { name: "john", age: 23 },
+  { name: "elsie", age: 13 },
+  { name: "jake", age: 19 },
+];
 // console.log(filterByAge(people, 20))
 
 // function composition
@@ -161,10 +134,7 @@ const people = [
  * a function that accepts multiple inputs functions and executes the functions
  * eg. double all even numbers in an array
  */
-const compose = function(...fns) {
-    console.log(fns);
-
-
-}
+const compose = function (...fns) {
+  console.log(fns);
+};
 // console.log(compose(array, filterEven, double));
-
