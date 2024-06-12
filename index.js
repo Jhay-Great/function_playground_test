@@ -109,19 +109,13 @@ const isAdult = function (person) {
 const filterByAge = function (people, minAge = 18) {
   return people.filter((person) => person.age >= minAge);
 };
-const people = [
-  { name: "john", age: 23 },
-  { name: "elsie", age: 13 },
-  { name: "jake", age: 19 },
-];
-
 
 // function composition
-/**
- * a function that accepts multiple inputs functions and executes the functions
- * eg. double all even numbers in an array
- */
-const compose = function (...fns) {
-  console.log(fns);
-};
-// console.log(compose(array, filterEven, double));
+const compose = function(...fns) {
+  return function(initialValue) {
+    return fns.reduceRight((accumulator, fn) => fn(accumulator), initialValue);
+  }
+}
+
+const fn = compose(double, filterEven);
+console.log(fn([1,2,3,4]))
