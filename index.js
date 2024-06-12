@@ -1,8 +1,5 @@
 // String transformation
 // capitalize
-const test0 = "ssa";
-const test1 = "this is new";
-const test2 = " this is new";
 const capitalize = function (string) {
   const word = string.trim();
   return word.replace(word[0], word[0].toUpperCase());
@@ -22,8 +19,6 @@ const isPalindrome = function (string) {
   for (let i = 0; i < string.length; i++) {
     let start = i;
     let end = string.length - 1 - i;
-
-    console.log("type of: ", typeof string);
 
     if (typeof string === "undefined") {
       console.log("undef");
@@ -80,8 +75,6 @@ const average = function (array) {
   let sum = array[0];
   let length = array.length;
 
-  console.log(length);
-
   for (let i = 1; i < array.length; i++) {
     sum += array[i];
   }
@@ -117,5 +110,3 @@ const compose = function(...fns) {
   }
 }
 
-const fn = compose(double, filterEven);
-console.log(fn([1,2,3,4]))
