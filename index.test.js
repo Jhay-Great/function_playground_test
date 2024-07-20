@@ -91,11 +91,12 @@ test('should filter out and keep person with a min age of specified', () => {
 
 
 test('should combine multiple functions and return the results from the two functions used', () => {
-    expect(capitalize(reverse('hello'))).toBe('Olleh');
-    expect(double(filterEven([1,2,3,8]))).toStrictEqual([4, 16]);
+
+    const reverseAndCapitalize = compose(capitalize, reverse);
+    const filterEvenNumbersAndDouble = compose(double, filterEven);
+    
+    expect(reverseAndCapitalize('hello')).toStrictEqual('Olleh');
+    expect(filterEvenNumbersAndDouble([1,2,3,8])).toStrictEqual([4, 16]);
 })
 
 
-// Use the compose(...fns) function (you can find implementations online) to
-// combine your functions in interesting ways. For example, create a function to
-// reverse and capitalize a string, or to double all the even numbers in an array.

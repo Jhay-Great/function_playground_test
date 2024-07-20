@@ -16,19 +16,33 @@ const reverse = function (string) {
 
 // isPalindrome(str)
 const isPalindrome = function (string) {
-  for (let i = 0; i < string.length; i++) {
-    let start = i;
-    let end = string.length - 1 - i;
+  if (typeof string !== 'string') return 'not a string';
 
-    if (typeof string === "undefined") {
-      console.log("undef");
-    }
+  let start = 0;
+  let end = string.length - 1;
 
-    if (string[start] !== string[end] || string === undefined) return false;
-    if (start === end && string[start] === string[end]) return true;
+  while (start < end) {
+    if (string[start] !== string[end]) return false;
+
+    start++;
+    end--;
   }
 
-  return typeof string !== "string" && false;
+  return true;
+  
+  // for (let i = 0; i < string.length; i++) {
+  //   let start = i;
+  //   let end = string.length - 1 - i;
+
+  //   if (typeof string === "undefined") {
+  //     console.log("undef");
+  //   }
+
+  //   if (string[start] !== string[end] || string === undefined) return false;
+  //   if (start === end && string[start] === string[end]) return true;
+  // }
+
+  // return typeof string !== "string" && false;
   
 };
 
