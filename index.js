@@ -32,10 +32,13 @@ const isPalindrome = function (string) {
   
 };
 
+// console.log('palindrome: ', isPalindrome('peep'))
+
 // wordCount(str);
 const wordCount = function (string) {
+  const words = string.split(' ');
   let count = 0;
-  for (let i = 0; i < string.length; i++) {
+  for (let i = 0; i < words.length; i++) {
     count += 1;
   }
   return count;
@@ -108,5 +111,20 @@ const compose = function(...fns) {
   return function(initialValue) {
     return fns.reduceRight((accumulator, fn) => fn(accumulator), initialValue);
   }
+}
+
+module.exports = {
+  capitalize,
+  reverse,
+  isPalindrome,
+  wordCount,
+  double,
+  filterEven,
+  sum,
+  average,
+  fullName,
+  isAdult,
+  filterByAge,
+  compose
 }
 
